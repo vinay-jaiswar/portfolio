@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Freeman&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Freeman&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zeyada&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: linear-gradient(
+      rgba(204, 204, 204, 0.3) 2px,
+      transparent 2px
+    ),
+    linear-gradient(90deg, rgba(204, 204, 204, 0.3) 2px, transparent 2px),
+    linear-gradient(rgba(204, 204, 204, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(204, 204, 204, 0.3) 1px, #e5e5f7 1px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+section {
+  position: relative;
+  padding: 1rem 0;
+}
+
+section h3 {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #2993f0;
+  text-shadow: 1px 0 #7ecaf7;
+  padding: 1rem 0;
+  font-family: 'Zeyada', cursive;
+  font-weight: 900;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* MAIN SECTION */
+.main-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h2 .name {
+  color: #2993f0;
+}
+
+.main-section a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  padding: 0.5rem 1.8rem;
+  margin: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border: 2px solid #333;
+  letter-spacing: 0.6px;
+}
+
+.main-section a:hover {
+  background-color: #333;
+  color: #eef7ff;
+}
+
+/* SCROLL DOWN ARROW */
+.scroll-down-arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite alternate;
+  cursor: pointer;
+}
+
+.scroll-down-arrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid #444;
+  border-bottom: 2px solid #444;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+/* ABOUT SECTION */
+.about-card {
+  background-color: #444;
+  padding: 2rem 5rem;
+  margin: 1rem 20rem;
+  color: #eee;
+  border-radius: 5px;
+}
+
+.about-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.about .position {
+  font-size: 1.4rem;
+  color: rgb(233, 233, 233);
+}
+
+.about-info {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+}
+
+/* PROJECT SECTION */
+.project-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.project-card {
+  background-color: #444;
+  color: #e5e5f7;
+  padding: 2rem 3.5rem;
+  margin: 2rem 0;
+  width: 45%;
+  border-radius: 5px;
+}
+
+.img-container {
+  max-width: 100%;
+  height: 28rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 1rem 0rem;
+  margin: 0.6rem 0;
+}
+
+.project-img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0.9rem 0;
+  text-decoration: none;
+  color: #ececf7;
+}
+
+.project-summary {
+  font-size: 1.2rem;
+  color: rgb(229, 229, 247, 1);
+}
+
+/* CONTACT SECTION */
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+  border: 1.5px solid #333;
+  font-size: 1.4rem;
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.links a:hover {
+  background-color: #333;
+  color: #e5e5f7;
+}
+
+/* FOOTER */
+footer {
+  margin: 1rem 0;
+}
+
+footer p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #333;
+  padding: 1rem 0.5rem;
+}
+
+/* SMALL SCREEN CSS */
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  .scroll-down-arrow {
+    bottom: 9rem;
+  }
+
+  .about-card {
+    padding: 3rem 4rem;
+    margin: 1rem 3rem;
+  }
+
+  .project-card-container {
+    display: block;
+  }
+
+  .project-card {
+    padding: 2rem 2rem;
+    margin: 2rem 2rem;
+    width: auto;
+  }
+
+  .img-container {
+    height: 16rem;
+  }
+
+  .project-title {
+    margin: 1.5rem 0;
+  }
+}
